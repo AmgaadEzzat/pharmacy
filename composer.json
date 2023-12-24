@@ -6,6 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "astrotomic/laravel-translatable": "^11.12",
+        "doctrine/dbal": "^4.0@RC",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
@@ -28,7 +30,8 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "app/Helpers/CheckLanguage.php"
+            "app/Helpers/CheckLanguage.php",
+            "app/Helpers/GeneralHelper.php"
         ]
     },
     "autoload-dev": {

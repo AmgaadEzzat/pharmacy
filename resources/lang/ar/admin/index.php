@@ -11,4 +11,6 @@ return [
     'Status' => 'حالة الطلب',
     'Product' => 'المنتج',
     'Evaluation' => 'التقييم',
+    'Main' => 'الرئيسيه',
+    'Main sections' => 'الاقسام الرئيسية'
 ];

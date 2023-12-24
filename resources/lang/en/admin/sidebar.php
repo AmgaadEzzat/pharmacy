@@ -10,7 +10,8 @@ return [
     'Show all' => 'Show all',
     'Add new category' => 'Add new category',
     'Sub categories' => 'Sub Categories',
-    'Add sub-new category' => 'Add new sub-category',
+    'Add new product' => 'Add new product',
     'Brands' => 'Brands',
-    'Add new brand' => 'Add new brand'
+    'Add new brand' => 'Add new brand',
+    'Products' => 'Products'
 ];

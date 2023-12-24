@@ -11,4 +11,6 @@ return [
     'Status' => 'Status',
     'Product' => 'Product',
     'Evaluation' => 'Evaluation',
+    'Main' => 'Main',
+    'Main sections' => 'Main sections'
 ];

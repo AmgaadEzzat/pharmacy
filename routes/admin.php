@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Dashboard\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,21 @@ Route::group(
                 ->name('admin.profile');
             Route::put('update', [ProfileController::class, 'updateProfile'])
                 ->name('update.admin.profile');
+        });
+        ///////////////////////productRoutes/////////////////////////
+        Route::group(['prefix' => 'product'], function() {
+            Route::get('getProducts', [ProductController::class, 'index'])
+                ->name('show.products');
+            Route::get('createProducts', [ProductController::class, 'create'])
+                ->name('create.product');
+            Route::post('storeProduct', [ProductController::class, 'store'])
+                ->name('store.product');
+            Route::get('deleteProduct/{id}', [ProductController::class, 'destroy'])
+                ->name('delete.product');
+            Route::get('editProduct/{id}', [ProductController::class, 'edit'])
+                ->name('edit.product');
+            Route::post('updateProduct/{id}', [ProductController::class, 'update'])
+                ->name('update.product');
         });
     });
 

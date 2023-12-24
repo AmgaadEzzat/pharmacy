@@ -2,7 +2,7 @@
 
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
-const PAGINATION_COUNT = 15;
+const PAGINATION_COUNT = 10;
 
 function getCurrentLanguage(): string
 {

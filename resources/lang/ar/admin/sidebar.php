@@ -10,7 +10,8 @@ return [
     'Show all' => 'عرض الكل',
     'Add new category' => 'اضافة فئه جديده',
     'Sub categories' => 'الفئات الفرعيه',
-    'Add new sub-category' => 'اضافة فئه فرعيه جديده',
+    'Add new product' => 'اضافة منتج جديد',
     'Brands' => 'العلامات التجارية',
-    'Add new brand' => 'اضافة علامة تجاريه جديده'
+    'Add new brand' => 'اضافة علامة تجاريه جديده',
+    'Products' => 'المنتجات'
 ];
