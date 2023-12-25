@@ -112,11 +112,11 @@
                                                 <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">
                                                     <i class="ft-x"></i>
-                                                    {{__('admin/pharmacy.Back')}}
+                                                    {{__('admin/index.Back')}}
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
                                                     <i class="la la-check-square-o"></i>
-                                                    {{__('admin/pharmacy.Edit')}}
+                                                    {{__('admin/index.Edit')}}
                                                 </button>
                                             </div>
                                         </form>

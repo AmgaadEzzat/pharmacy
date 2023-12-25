@@ -75,7 +75,7 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">
-                                                                {{__('admin/pharmacy.Address')}}
+                                                                {{__('admin/index.Address')}}
                                                             </label>
                                                             <input type="text"
                                                                    class="form-control"
@@ -107,11 +107,11 @@
                                                 <button type="button" class="btn btn-warning mr-1"
                                                         onclick="history.back();">
                                                     <i class="ft-x"></i>
-                                                    {{__('admin/pharmacy.Back')}}
+                                                    {{__('admin/index.Back')}}
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
                                                     <i class="la la-check-square-o"></i>
-                                                    {{__('admin/pharmacy.Add')}}
+                                                    {{__('admin/index.Add')}}
                                                 </button>
                                             </div>
                                         </form>

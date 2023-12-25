@@ -49,19 +49,19 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('store.product')}}"
+                                              action="{{route('store.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="ft-home"></i>
-                                                    {{__('admin/products.Basic data of the product')}}
+                                                    {{__('admin/store.Basic data of the store')}}
                                                 </h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">
-                                                                {{__('admin/products.Product name')}}
+                                                                {{__('admin/store.Store name')}}
                                                             </label>
                                                             <input type="text" id="name"
                                                                    class="form-control"
@@ -77,43 +77,12 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">
-                                                                {{__('admin/products.Price')}}
+                                                                {{__('admin/index.Address')}}
                                                             </label>
                                                             <input type="text"
                                                                    class="form-control"
-                                                                   name="price">
-                                                            @error("price")
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">
-                                                                {{__('admin/products.Quantity')}}
-                                                            </label>
-                                                            <input type="text"
-                                                                   class="form-control"
-                                                                   name="quantity">
-                                                            @error("quantity")
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">
-                                                                {{__('admin/products.Description')}}
-                                                            </label>
-                                                            <textarea  name="description" id="description"
-                                                                       class="form-control"
-                                                                       placeholder="  "
-                                                            >{{old('description')}}</textarea>
-
-                                                            @error("description")
+                                                                   name="address">
+                                                            @error("address")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
