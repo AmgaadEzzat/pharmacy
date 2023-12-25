@@ -25,7 +25,7 @@ class PharmacyRequest extends FormRequest
     {
         return [
             'name' => 'required|max:100',
-            'phone' => 'numeric|min:8',
+            'phone' => 'required|regex:/(01)[0-9]{9}/',
             'address' => 'required'
         ];
     }
