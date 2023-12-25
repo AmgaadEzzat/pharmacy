@@ -12,6 +12,7 @@ return [
     'Sub categories' => 'Sub Categories',
     'Add new product' => 'Add new product',
     'Brands' => 'Brands',
-    'Add new brand' => 'Add new brand',
-    'Products' => 'Products'
+    'Add new pharmacy' => 'Add new pharmacy',
+    'Products' => 'Products',
+    'Pharmacies' => 'Pharmacies',
 ];

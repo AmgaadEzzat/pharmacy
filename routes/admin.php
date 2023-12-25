@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Dashboard\PharmacyController;
 use App\Http\Controllers\Dashboard\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +50,21 @@ Route::group(
                 ->name('edit.product');
             Route::post('updateProduct/{id}', [ProductController::class, 'update'])
                 ->name('update.product');
+        });
+        /////////////////////pharmacyRouts///////////////////////////////////////
+        Route::group(['prefix' => 'pharmacy'], function() {
+            Route::get('getPharmacies', [PharmacyController::class, 'index'])
+                ->name('show.pharmacies');
+            Route::get('createPharmacy', [PharmacyController::class, 'create'])
+                ->name('create.pharmacy');
+            Route::post('storePharmacy', [PharmacyController::class, 'store'])
+                ->name('store.pharmacy');
+            Route::get('deletePharmacy/{id}', [PharmacyController::class, 'destroy'])
+                ->name('delete.pharmacy');
+            Route::get('editPharmacy/{id}', [PharmacyController::class, 'edit'])
+                ->name('edit.pharmacy');
+            Route::post('updatePharmacy/{id}', [PharmacyController::class, 'update'])
+                ->name('update.pharmacy');
         });
     });
 
