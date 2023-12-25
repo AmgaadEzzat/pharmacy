@@ -38,6 +38,21 @@
                     </li>
                 </ul>
             </li>
+            <li class="nav-item"><a href=""><i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">{{__('admin/sidebar.Stores')}}</span>
+                    <span
+                        class="badge badge badge-danger badge-pill float-right mr-2">
+                    </span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="{{route('show.stores')}}"
+                                          data-i18n="nav.dash.ecommerce">{{__('admin/sidebar.Show all')}} </a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('create.store')}}"
+                           data-i18n="nav.dash.crypto">{{__('admin/sidebar.Add new store')}}</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

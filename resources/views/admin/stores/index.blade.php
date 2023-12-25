@@ -50,27 +50,23 @@
                                             <thead class="">
                                             <tr>
                                                 <th>{{__('admin/index.Name')}}</th>
-                                                <th>{{__('admin/products.Description')}}</th>
-                                                <th>{{__('admin/products.Price')}}</th>
-                                                <th>{{__('admin/products.Quantity')}}</th>
+                                                <th>{{__('admin/index.Address')}}</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @isset($products)
-                                                @foreach($products as $product)
+                                            @isset($stores)
+                                                @foreach($stores as $store)
                                                     <tr>
-                                                        <td>{{$product -> name}}</td>
-                                                        <td>{{$product -> description}}</td>
-                                                        <td>{{$product -> price}}</td>
-                                                        <td>{{$product -> quantity}}</td>
+                                                        <td>{{$store -> name}}</td>
+                                                        <td>{{$store -> address}}</td>
                                                         <td>
                                                             <div class="btn-group" role="group"
                                                                  aria-label="Basic example">
-                                                                <a href="{{route('edit.product',$product -> id)}}"
+                                                                <a href="{{route('edit.store',$store -> id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
                                                                     {{__('admin/index.Edit')}}
                                                                 </a>
-                                                                <a href="{{route('delete.product',$product -> id)}}"
+                                                                <a href="{{route('delete.store',$store -> id)}}"
                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
                                                                     {{__('admin/index.Delete')}}
                                                                 </a>

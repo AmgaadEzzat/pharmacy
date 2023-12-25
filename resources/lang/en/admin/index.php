@@ -12,5 +12,11 @@ return [
     'Product' => 'Product',
     'Evaluation' => 'Evaluation',
     'Main' => 'Main',
-    'Main sections' => 'Main sections'
+    'Main sections' => 'Main sections',
+    'Add' => 'Add',
+    'Back' => 'Back',
+    'Edit' => 'Edit',
+    'Delete' => 'Delete',
+    'Name' => 'Name',
+    'Address' => 'Address',
 ];

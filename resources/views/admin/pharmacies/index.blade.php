@@ -49,8 +49,8 @@
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
-                                                <th>{{__('admin/pharmacy.Name')}}</th>
-                                                <th>{{__('admin/pharmacy.Address')}}</th>
+                                                <th>{{__('admin/index.Name')}}</th>
+                                                <th>{{__('admin/index.Address')}}</th>
                                                 <th>{{__('admin/pharmacy.Phone')}}</th>
                                             </tr>
                                             </thead>
@@ -66,11 +66,11 @@
                                                                  aria-label="Basic example">
                                                                 <a href="{{route('edit.pharmacy',$pharmacy -> id)}}"
                                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                    {{__('admin/pharmacy.Edit')}}
+                                                                    {{__('admin/index.Edit')}}
                                                                 </a>
                                                                 <a href="{{route('delete.pharmacy',$pharmacy -> id)}}"
                                                                    class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                    {{__('admin/pharmacy.Delete')}}
+                                                                    {{__('admin/index.Delete')}}
                                                                 </a>
                                                             </div>
                                                         </td>

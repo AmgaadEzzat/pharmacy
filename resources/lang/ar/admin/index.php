@@ -12,5 +12,11 @@ return [
     'Product' => 'المنتج',
     'Evaluation' => 'التقييم',
     'Main' => 'الرئيسيه',
-    'Main sections' => 'الاقسام الرئيسية'
+    'Main sections' => 'الاقسام الرئيسية',
+    'Name' => 'اﻻسم',
+    'Add' => 'اضافه',
+    'Back' => 'رجوع',
+    'Edit' => 'تعديل',
+    'Delete' => 'حذف',
+    'Address' => 'العنوان',
 ];

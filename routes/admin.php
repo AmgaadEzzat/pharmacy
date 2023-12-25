@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Dashboard\PharmacyController;
 use App\Http\Controllers\Dashboard\ProductController;
+use App\Http\Controllers\Dashboard\StoreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -65,6 +66,21 @@ Route::group(
                 ->name('edit.pharmacy');
             Route::post('updatePharmacy/{id}', [PharmacyController::class, 'update'])
                 ->name('update.pharmacy');
+        });
+        ////////////////////////////storesRoutes/////////////////////////////////////
+        Route::group(['prefix' => 'store'], function() {
+            Route::get('getStores', [StoreController::class, 'index'])
+                ->name('show.stores');
+            Route::get('createStore', [StoreController::class, 'create'])
+                ->name('create.store');
+            Route::post('storeStore', [StoreController::class, 'store'])
+                ->name('store.store');
+            Route::get('deleteStore/{id}', [StoreController::class, 'destroy'])
+                ->name('delete.store');
+            Route::get('editStore/{id}', [StoreController::class, 'edit'])
+                ->name('edit.store');
+            Route::post('updateStore/{id}', [StoreController::class, 'update'])
+                ->name('update.store');
         });
     });
 
