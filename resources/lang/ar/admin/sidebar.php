@@ -12,6 +12,7 @@ return [
     'Sub categories' => 'الفئات الفرعيه',
     'Add new product' => 'اضافة منتج جديد',
     'Brands' => 'العلامات التجارية',
-    'Add new brand' => 'اضافة علامة تجاريه جديده',
-    'Products' => 'المنتجات'
+    'Add new pharmacy' => 'اضافة صيدليه جديده',
+    'Products' => 'المنتجات',
+    'Pharmacies' => 'الصيدليات'
 ];
