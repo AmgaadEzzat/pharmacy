@@ -26,7 +26,7 @@ class ProductRequest extends FormRequest
         return [
             'name' => 'required|max:100|unique:product_translations,name,'.$this->id,
             'description' => 'required|max:1000',
-            'quantity' => 'numeric|nullable',
+            'sku' => 'nullable',
             'price' => 'required|min:0|numeric'
         ];
     }
