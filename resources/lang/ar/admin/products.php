@@ -4,7 +4,7 @@ return [
     'Name' => 'اﻻسم',
     'Description' => 'الوصف',
     'Price' => 'السعر',
-    'Quantity' => 'الكميه',
+    'Sku' => 'الرقم التسلسلي',
     'Basic data of the product' => 'البيانات الاساسية للمنتج',
     'Product name' => 'اسم المنتج',
     'Add' => 'اضافه',

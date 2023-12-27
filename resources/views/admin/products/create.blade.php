@@ -93,12 +93,12 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">
-                                                                {{__('admin/products.Quantity')}}
+                                                                {{__('admin/products.Sku')}}
                                                             </label>
                                                             <input type="text"
                                                                    class="form-control"
-                                                                   name="quantity">
-                                                            @error("quantity")
+                                                                   name="sku">
+                                                            @error("sku")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
