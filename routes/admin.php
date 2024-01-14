@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Dashboard\PharmacyController;
 use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\StoreController;
+use App\Http\Controllers\Dashboard\StoresProductsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -67,7 +68,7 @@ Route::group(
             Route::post('updatePharmacy/{id}', [PharmacyController::class, 'update'])
                 ->name('update.pharmacy');
         });
-        ////////////////////////////storesRoutes/////////////////////////////////////
+        ////////////////////////////storesRoutes////////////////////////////////
         Route::group(['prefix' => 'store'], function() {
             Route::get('getStores', [StoreController::class, 'index'])
                 ->name('show.stores');
@@ -82,6 +83,13 @@ Route::group(
             Route::post('updateStore/{id}', [StoreController::class, 'update'])
                 ->name('update.store');
         });
+        ///////////////////////Routes of products to stores ////////////////////
+        Route::get('newSupply', [StoresProductsController::class, 'create'])
+            ->name('create.newSupply');
+        Route::post('storesSupply', [StoresProductsController::class, 'store'])
+            ->name('store.newSupply');
+        Route::get('showSupply', [StoresProductsController::class, 'index'])
+            ->name('show.supplies');
     });
 
     Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin',

@@ -18,4 +18,10 @@ class Store extends Model
     protected $fillable = [
         'address',
     ];
+
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_stores')
+            ->withPivot('quantity', 'price');
+    }
 }

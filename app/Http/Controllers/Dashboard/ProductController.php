@@ -33,8 +33,7 @@ class ProductController extends Controller
             $product = new Product();
             $product->name = $request->name;
             $product->description = $request->description;
-            $product->price = $request->price;
-            $product->quantity = $request->quantity;
+            $product->sku = $request->sku;
             $product->save();
             DB::commit();
 
@@ -79,8 +78,7 @@ class ProductController extends Controller
                 DB::beginTransaction();
                 $product->name = $request->name;
                 $product->description = $request->description;
-                $product->price = $request->price;
-                $product->quantity = $request->quantity;
+                $product->sku = $request->sku;
                 $product->save();
                 DB::commit();
             }

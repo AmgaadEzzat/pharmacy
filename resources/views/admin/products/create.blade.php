@@ -73,20 +73,6 @@
                                                             @enderror
                                                         </div>
                                                     </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="projectinput1">
-                                                                {{__('admin/products.Price')}}
-                                                            </label>
-                                                            <input type="text"
-                                                                   class="form-control"
-                                                                   name="price">
-                                                            @error("price")
-                                                            <span class="text-danger">{{$message}}</span>
-                                                            @enderror
-                                                        </div>
-                                                    </div>
                                                 </div>
 
                                                 <div class="row">

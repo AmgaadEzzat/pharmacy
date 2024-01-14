@@ -8,5 +8,7 @@ return [
     'Add new pharmacy' => 'اضافة صيدليه جديده',
     'Products' => 'المنتجات',
     'Pharmacies' => 'الصيدليات',
-    'Stores' => 'المخازن'
+    'Stores' => 'المخازن',
+    'Supply of medicines' => 'توريد الأدوية',
+    'Add a new supply' => 'إضافة إمدادات جديدة'
 ];

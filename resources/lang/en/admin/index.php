@@ -19,4 +19,5 @@ return [
     'Delete' => 'Delete',
     'Name' => 'Name',
     'Address' => 'Address',
+    'Quantity' => 'Quantity'
 ];
