@@ -49,33 +49,25 @@
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
-                                                <th>{{__('admin/index.Name')}}</th>
-                                                <th>{{__('admin/products.Description')}}</th>
-                                                <th>{{__('admin/products.Sku')}}</th>
+                                                <th>{{__('admin/index.المخزن')}}</th>
+                                                <th>{{__('admin/products.الدواء')}}</th>
+                                                <th>{{__('admin/products.الكميه')}}</th>
+                                                <th>{{__('admin/products.السعر')}}</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             @isset($products)
                                                 @foreach($products as $product)
+                                                    @php
+                                                    $store = \App\Models\Store::find($product->pivot->store_id)
+                                                    @endphp
                                                     <tr>
-                                                        <td>{{$product -> name}}</td>
-                                                        <td>{{$product -> description}}</td>
-                                                        <td>{{$product -> sku}}</td>
-                                                        <td>
-                                                            <div class="btn-group" role="group"
-                                                                 aria-label="Basic example">
-                                                                <a href="{{route('edit.product',$product -> id)}}"
-                                                                   class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                    {{__('admin/index.Edit')}}
-                                                                </a>
-                                                                <a href="{{route('delete.product',$product -> id)}}"
-                                                                   class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
-                                                                    {{__('admin/index.Delete')}}
-                                                                </a>
-                                                            </div>
-                                                        </td>
+                                                        <td>{{$store->name}}</td>
+                                                        <td>{{$product->name}}</td>
+                                                        <td>{{$product->pivot->quantity}}</td>
+                                                        <td>{{$product->pivot->price}}</td>
                                                     </tr>
-                                                @endforeach
+                                            @endforeach
                                             @endisset
                                             </tbody>
                                         </table>

@@ -49,44 +49,66 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('update.product',$product -> id)}}"
+                                              action="{{route('store.newSupply')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
-                                            <input name="id" value="{{$product -> id}}" type="hidden">
                                             <div class="form-body">
                                                 <h4 class="form-section"><i class="ft-home"></i>
                                                     {{__('admin/products.Basic data of the product')}}
                                                 </h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
+                                                <div class="row" >
+                                                    <div class="col-md-4">
                                                         <div class="form-group">
                                                             <label for="projectinput1">
-                                                                {{__('admin/products.Product name')}}
+                                                                {{__('admin/products.Choose the medicine')}}
                                                             </label>
-                                                            <input type="text" id="name"
-                                                                   class="form-control"
-                                                                   placeholder="  "
-                                                                   value="{{$product -> name}}"
-                                                                   name="name">
-                                                            @error("name")
-                                                            <span class="text-danger">{{$message}}</span>
+                                                            <select name="product" class="select2 form-control">
+                                                                <optgroup label="{{__('admin/products.Choose the medicine')}}">
+                                                                    @if($products && $products -> count() > 0)
+                                                                        @foreach($products as $product)
+                                                                            <option
+                                                                                value="{{$product -> id }}">{{$product -> name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                </optgroup>
+                                                            </select>
+                                                            @error('product')
+                                                            <span class="text-danger"> {{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label for="projectinput1">
+                                                                {{__('admin/products.Select the store')}}
+                                                            </label>
+                                                            <select name="store" class="select2 form-control">
+                                                                <optgroup label="{{__('admin/products.Select the store')}}">
+                                                                    @if($stores && $stores -> count() > 0)
+                                                                        @foreach($stores as $store)
+                                                                            <option
+                                                                                value="{{$store -> id }}">{{$store -> name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                </optgroup>
+                                                            </select>
+                                                            @error('store')
+                                                            <span class="text-danger"> {{$message}}</span>
                                                             @enderror
                                                         </div>
                                                     </div>
                                                 </div>
-
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">
-                                                                {{__('admin/products.Sku')}}
+                                                                {{__('admin/products.Price')}}
                                                             </label>
                                                             <input type="text"
                                                                    class="form-control"
-                                                                   value="{{$product -> sku}}"
-                                                                   name="sku">
-                                                            @error("sku")
+                                                                   name="price">
+                                                            @error("price")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
@@ -94,17 +116,12 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="projectinput1">
-                                                                {{__('admin/products.Description')}}
+                                                                {{__('admin/index.Quantity')}}
                                                             </label>
-                                                            <textarea
-                                                                name="description"
-                                                                value="{{$product -> description}}"
-                                                                id="description"
-                                                               class="form-control"
-                                                               placeholder="  "
-                                                            >{{old('description')}}</textarea>
-
-                                                            @error("description")
+                                                            <input type="text"
+                                                                   class="form-control"
+                                                                   name="quantity">
+                                                            @error("quantity")
                                                             <span class="text-danger">{{$message}}</span>
                                                             @enderror
                                                         </div>
@@ -119,7 +136,7 @@
                                                 </button>
                                                 <button type="submit" class="btn btn-primary">
                                                     <i class="la la-check-square-o"></i>
-                                                    {{__('admin/index.Edit')}}
+                                                    {{__('admin/index.Add')}}
                                                 </button>
                                             </div>
                                         </form>

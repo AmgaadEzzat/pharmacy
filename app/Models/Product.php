@@ -17,7 +17,13 @@ class Product extends Model
         'description',
     ];
     protected $fillable = [
-        'quantity',
-        'price'
+        'sku'
     ];
+
+    public function stores()
+    {
+        return $this->belongsToMany(Store::class, 'product_stores')
+            ->withPivot('quantity', 'price');
+    }
+
 }

@@ -19,4 +19,5 @@ return [
     'Edit' => 'تعديل',
     'Delete' => 'حذف',
     'Address' => 'العنوان',
+    'Quantity' => 'الكميه'
 ];
