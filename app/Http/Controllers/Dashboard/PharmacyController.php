@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\PharmacyRequest;
 use App\Models\Pharmacy;
+use App\Models\PharmacyTranslation;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -49,9 +50,17 @@ class PharmacyController extends Controller
     {
         try {
             $pharmacy = Pharmacy::find($id);
-            if($pharmacy) {
-                $pharmacy->delete();
-            }
+                if($pharmacy) {
+                    $translatablePharmacy = PharmacyTranslation::
+                        where('pharmacy_id', $id)->get();
+                    if ($translatablePharmacy) {
+                        foreach ($translatablePharmacy as $pharamacy) {
+                            $pharamacy->delete();
+                        }
+                    }
+
+                    $pharmacy->delete();
+                }
 
             return successMessage('Deleted');
         } catch (\Exception $e) {
