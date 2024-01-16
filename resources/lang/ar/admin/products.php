@@ -8,4 +8,5 @@ return [
     'Product name' => 'اسم المنتج',
     'Choose the medicine' => 'اختر الدواء',
     'Select the store' => 'اختر المخزن',
+    'Select the pharmacy' => 'اختر الصيدليه',
 ];

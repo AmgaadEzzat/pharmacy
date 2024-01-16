@@ -49,6 +49,7 @@
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
+                                                <th>{{__('admin/pharmacy.Pharmacy name')}}</th>
                                                 <th>{{__('admin/store.Store name')}}</th>
                                                 <th>{{__('admin/products.Product name')}}</th>
                                                 <th>{{__('admin/index.Quantity')}}</th>
@@ -56,16 +57,18 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @isset($products)
-                                                @foreach($products as $product)
+                                            @isset($stores)
+                                                @foreach($stores as $store)
                                                     @php
-                                                    $store = \App\Models\Store::find($product->pivot->store_id)
+                                                    $product = \App\Models\Product::find($store->pivot->product_id);
+                                                    $pharmacy = \App\Models\Pharmacy::find($store->pivot->pharmacy_id)
                                                     @endphp
                                                     <tr>
+                                                        <td>{{$pharmacy->name}}</td>
                                                         <td>{{$store->name}}</td>
                                                         <td>{{$product->name}}</td>
-                                                        <td>{{$product->pivot->quantity}}</td>
-                                                        <td>{{$product->pivot->price}}</td>
+                                                        <td>{{$store->pivot->quantity}}</td>
+                                                        <td>{{$store->pivot->price}}</td>
                                                     </tr>
                                             @endforeach
                                             @endisset

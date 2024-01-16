@@ -17,5 +17,7 @@ return [
     'Pharmacies' => 'Pharmacies',
     'Stores' => 'Stores',
     'Supply of medicines' => 'Supply of medicines',
-    'Add a new supply' => 'Add a new supply'
+    'Add a new supply' => 'Add a new supply',
+    'Supply of pharmacies' => 'Supply of pharmacies',
+    'Add a new supply to pharmacy' => 'Add a new supply to pharmacy'
 ];

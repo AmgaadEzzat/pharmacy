@@ -10,5 +10,7 @@ return [
     'Pharmacies' => 'الصيدليات',
     'Stores' => 'المخازن',
     'Supply of medicines' => 'توريد الأدوية',
-    'Add a new supply' => 'إضافة إمدادات جديدة'
+    'Add a new supply' => 'إضافة إمدادات جديدة',
+    'Supply of pharmacies' => 'توريد الصيدليات',
+    'Add a new supply to pharmacy' => 'إضافة إمدادات للصيدليات'
 ];

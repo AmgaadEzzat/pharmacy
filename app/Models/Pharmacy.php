@@ -19,4 +19,10 @@ class Pharmacy extends Model
         'address',
         'phone'
     ];
+
+    public function stores()
+    {
+        return $this->belongsToMany(Store::class, 'store_pharmacies')
+            ->withPivot('product_id', 'quantity', 'price');
+    }
 }
