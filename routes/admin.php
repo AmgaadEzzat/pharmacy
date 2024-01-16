@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Dashboard\PharmacyController;
 use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\StoreController;
+use App\Http\Controllers\Dashboard\StoresPharmacyController;
 use App\Http\Controllers\Dashboard\StoresProductsController;
 use Illuminate\Support\Facades\Route;
 
@@ -83,13 +84,22 @@ Route::group(
             Route::post('updateStore/{id}', [StoreController::class, 'update'])
                 ->name('update.store');
         });
-        ///////////////////////Routes of products to stores ////////////////////
+        ///////////////////////Routes the products of stores ////////////////////
         Route::get('newSupply', [StoresProductsController::class, 'create'])
             ->name('create.newSupply');
         Route::post('storesSupply', [StoresProductsController::class, 'store'])
             ->name('store.newSupply');
         Route::get('showSupply', [StoresProductsController::class, 'index'])
             ->name('show.supplies');
+        ////////////////////////Routes the pharmacies of stores/////////////////
+        Route::get('newSupplyToPharmacy', [StoresPharmacyController::class, 'create'])
+            ->name('create.newSupplyPharmacy');
+        Route::post('storesSupplyToPharmacy', [StoresPharmacyController::class, 'store'])
+            ->name('store.newSupplyPharmacy');
+        Route::get('showSupplyOfPharmacies', [StoresPharmacyController::class, 'index'])
+            ->name('show.suppliesPharmacies');
+        Route::get('get-products', [StoresPharmacyController::class, 'getProducts'])
+            ->name('getProducts');
     });
 
     Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin',

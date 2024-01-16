@@ -7,5 +7,6 @@ return [
     'Basic data of the product' => 'Basic data of the product',
     'Product name' => 'Product name',
     'Choose the medicine' => 'Choose the medicine',
-    'Select the store' => 'Select the store'
+    'Select the store' => 'Select the store',
+    'Select the pharmacy' => 'Select the pharmacy'
 ];
