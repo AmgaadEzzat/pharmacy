@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProductRequest;
 use App\Models\Product;
+use App\Models\ProductTranslation;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -49,6 +50,13 @@ class ProductController extends Controller
         try {
             $product = Product::find($id);
             if($product) {
+                $translatableProduct = ProductTranslation::
+                where('product_id', $id)->get();
+                if ($translatableProduct) {
+                    foreach ($translatableProduct as $tranProduct) {
+                        $tranProduct->delete();
+                    }
+                }
                 $product->delete();
             }
 

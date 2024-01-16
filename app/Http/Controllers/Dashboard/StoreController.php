@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreRequest;
 use App\Models\Store;
+use App\Models\StoreTranslation;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -49,6 +50,13 @@ class StoreController extends Controller
         try {
             $store = Store::find($id);
             if($store) {
+                $translatableStore = StoreTranslation::
+                where('store_id', $id)->get();
+                if ($translatableStore) {
+                    foreach ($translatableStore as $tranStore) {
+                        $tranStore->delete();
+                    }
+                }
                 $store->delete();
             }
 
