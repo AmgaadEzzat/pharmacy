@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::group(['middleware' => ['auth:user'],
+    'namespace' => 'Api'], function() {
+//    Route::post('getCategories', [CategoriesController::class, 'index']);
+//    Route::post('getCategoryById', [CategoriesController::class,
+//        'getCategoryById']);
+//    Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function() {
+//        Route::post('adminLogin', [AuthController::class, 'login']);
+//        Route::post('adminLogout', [AuthController::class, 'logout'])
+//            ->middleware(['auth.guard:admin-api']);
+//    });
+});
